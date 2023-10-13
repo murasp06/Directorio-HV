@@ -18,13 +18,14 @@
 
     <body>
         <header>
+            
             <!-- menu lateral -->
-            <div class="navbar fixed navbar-dark bg-dark ">
+            <div  style="background-color: black;" class="navbar fixed navbar-dark ">
                 <div class="container">
                     <!-- <a href="#" class="navbar-brand text-start  d-flex"> -->
                         <button class="btn d-flex " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                            <img style="border-radius: 25px;" src="../img/logo.jpg" width="45" height="35" alt="">
-                            <h3 style="color: rgba(215, 162, 30, 0.796);">AMFICA!System</h3>
+                            <img class=" rounded-4" src=" /image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" width="95" height="65" alt="">
+                            <h3 class="text-warning">AMFICA!System</h3>
                         </button>
                     <!-- </a> -->
                     <div style="background-color:#1c1c1c;" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -33,10 +34,10 @@
                             <button style="background-color: white;" type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
-                            <a style="color: white;" href="<?php echo $ruta;?>sessiones/empleados.php" class="dropdown-item" type="button">Trabajadores</a>
-                            <a style="color: white;" href="<?php echo $ruta;?>sessiones/puestos_empleados.php" class="dropdown-item" type="button">Puestos</a>
-                            <a style="color: white;" href="<?php echo $ruta;?>sessiones/usuarios.php" class="dropdown-item" type="button">Usuarios</a>
-                            <a style="color: white;" href="<?php echo $ruta;?>admin/index.php" class="dropdown-item" type="button">Suite</a>
+                            <a style="color: white;" href="<?php echo $ruta;?>empleados.php" class="dropdown-item" type="button">Trabajadores</a>
+                            <a style="color: white;" href="<?php echo $ruta;?>puestos_empleados.php" class="dropdown-item" type="button">Puestos</a>
+                            <a style="color: white;" href="<?php echo $ruta;?>usuarios.php" class="dropdown-item" type="button">Usuarios</a>
+                            <a style="color: white;" href="/admin/index.php" class="dropdown-item" type="button">Suite</a>
                             <a style="color: white;" href="<?php //echo $ruta;?>#" class="dropdown-item" type="button">Foro</a>
                             <!-- <li><button class="dropdown-item" type="button"></button></li> -->
                         </div>
@@ -49,18 +50,17 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
     
-                    <div class="collapse navbar-collapse text-end" id="navbarHeader">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <div class="collapse navbar-collapse  justify-content-end text-end" id="navbarHeader">
+                        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                             <li class="nav-item px-2 text-white "><a class="nav-link active"></a></li>
-    
-                        </ul>
+                        </ul> -->
                         <select style="background-color: #1c1c1c;color:white" name="idioma" id="">
                             <option value=""><a href="#" class="nav-link px-2 text-white">Español</a></option>
                             <option value=""><a href="#" class="nav-link px-2 text-white">Ingles</a></option>
                         </select>
     
-                        <a href="#" class="nav-link px-2 text-white">Cuenta</a>
-                        <a href="../controlador/cerrar_sesion.php?id=" class="btn btn-warning">Cerrar sesion</a>
+                        <a href="#" class="nav-link px-2 text-white m-2">Cuenta</a>
+                        <a type="button" class="btn btn-outline-warning align-top" href="../controlador/cerrar_sesion.php?id=" >Cerrar sesion</a>
                     </div>
                 </div>
             </div>

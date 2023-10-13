@@ -1,12 +1,13 @@
 <?php include '/workspaces/PWA_AMFICA_V.0.1/Templades/header1.php' ?>
 
 <main class=" m-auto  ">
-
-
+    
+    
     <div class="text-center mb-5">
-        <a href="/">
+        <a class="text-decoration-none" href="/">
             <img style=" margin-top: 8%;height: 150px;border-radius: 50px;margin-right: 5px;text-align: center;" src="/image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" alt="logo AMFICA">
         </a>
+        <a href="login.php" class="text-warning ms-5 end">Iniciar session</a>
     </div>
     <div class="container">
 
