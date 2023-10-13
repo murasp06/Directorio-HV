@@ -1,4 +1,4 @@
-<?php include 'https://amfica-pwa-h5xya.ondigitalocean.app/Templades/header1.php'?>
+<?php include '../Templades/header1.php'?>
 
     <main  class="form-signin w-100  text-center  m-auto my-auto lg-p-5">
         <form class="col-md-4 p-lg-5 mx-auto  p-5">
