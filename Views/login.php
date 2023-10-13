@@ -1,4 +1,4 @@
-<?php include '/workspaces/PWA_AMFICA_V.0.1/Templades/header1.php'?>
+<?php include '/templades/header1.php'?>
 
     <main  class="form-signin w-100  text-center  m-auto my-auto lg-p-5">
         <form class="col-md-4 p-lg-5 mx-auto  p-5">
