@@ -22,7 +22,7 @@
 
 <body>
     <?php
-    require('/workspaces/PWA_AMFICA_V.0.1/model/conexion_bd.php');
+    require('../model/conexion_bd.php');
     $sql = $con->prepare("SELECT * FROM usuarios WHERE id_usuario='$var_id'");
     $sql->execute();
     $consul_usuarios = $sql->fetchAll(PDO::FETCH_OBJ);
@@ -76,4 +76,4 @@
         </div>
         
 
-        <?php include '/workspaces/PWA_AMFICA_V.0.1/Templades/footer.php' ?>
+        <?php include '../Templades/footer.php' ?>

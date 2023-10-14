@@ -27,7 +27,7 @@
 <body style="background-color: #F2F4F4 ;">
     <?php
 
-    include("/workspaces/PWA_AMFICA_V.0.1/model/conexion_bd.php");
+    include("../model/conexion_bd.php");
 
     $id = $_GET['id'];
 
@@ -132,5 +132,5 @@
     // para cerrar la conexion a la bd se asigna null a la variable que construye el pdo
     $sql=null;
 
-    require '/workspaces/PWA_AMFICA_V.0.1/Templades/footer.php'
+    require '../Templades/footer.php'
     ?>

@@ -89,7 +89,7 @@ if ($varsesion == null || $varsesion == '') {
 
             <?php
             $id = $_SESSION['id'];
-            require('../model/config.php');
+            require('../model/funciones.php');
             //consulta a la tb de mascotas 
             $sql = $con->prepare("SELECT * FROM mascotas WHERE id_usuario='$id' LIMIT 4");
             $sql->execute();
@@ -308,4 +308,4 @@ if ($varsesion == null || $varsesion == '') {
     </section>
 
 
-<?php include("/workspaces/PWA_AMFICA_V.0.1/Templades/footer.php") ?>
+<?php include("../Templades/footer.php") ?>

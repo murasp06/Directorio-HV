@@ -31,4 +31,4 @@
             <p class="mt-5 mb-3 text-body-secondary">&copy; AMFICA 2022-2023</p>
         </form>
 
-<?php include '/workspaces/PWA_AMFICA_V.0.1/Templades/footer1.php' ?>
+<?php include '../Templades/footer1.php' ?>

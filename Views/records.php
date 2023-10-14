@@ -1,4 +1,4 @@
-<?php include '/workspaces/PWA_AMFICA_V.0.1/Templades/header1.php' ?>
+<?php include '../Templades/header1.php' ?>
 
 <main class=" m-auto  ">
     
@@ -12,7 +12,7 @@
     <div class="container">
 
         <!-- formulario de registro -->
-        <form class="col-md-7 m-auto row g-3 needs-validation">
+        <form class="col-md-7 m-auto row g-3 needs-validation" action="../controlador/con.insert.php" method="post">
 
             <div class=" col-md form-floating mb-3">
                 <input type="text" class="form-control" id="nombres" placeholder="Jhon" required>
@@ -118,4 +118,4 @@
             </div>
         </form>
     </div>
-    <?php include '/workspaces/PWA_AMFICA_V.0.1/Templades/footer.php' ?>
+    <?php include '../Templades/footer.php' ?>
