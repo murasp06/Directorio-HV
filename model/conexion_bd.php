@@ -6,7 +6,7 @@ $usuario="uhfduzfmyczxvdbh"; //va el usuario para bd
 $pass="4W8o2OwZ7muiYw8MuLci"; //clave para bd
 
 try{
-    $con=new PDO("mysql:host=$servidor;dbname=$bd;port=25060",$usuario,$pass);
+    $con=new PDO("mysql:host=$servidor;dbname=$bd;port=3306",$usuario,$pass);
 }catch(Exception $ex){
     echo "error de conexion ".$ex->getMessage();
 }
