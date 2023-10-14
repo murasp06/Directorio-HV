@@ -28,7 +28,6 @@
             </div> -->
             <button class="btn btn-danger w-100 py-2 mb-3 btn-outline-warning fs-4" name="btnlogin" type="submit">loguear</button>
             <a  href="">recuperar contraseña</a> <span>o</span> <a href="records.php">Crear cuenta</a>
-            <p class="mt-5 mb-3 text-body-secondary">&copy; AMFICA 2022-2023</p>
         </form>
 
 <?php include '../Templades/footer1.php' ?>
