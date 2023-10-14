@@ -3,13 +3,7 @@
 require('../model/conexion_bd.php');
 
 if(!empty($_POST["btnlogin"])){
-if (empty($_POST['user']) and empty($_POST['clave'])) {
-    echo '<div style="background-color: rgba(240, 44, 44, 0.277);color: red;padding:1px;">
-    <div>
-      Debes completar los campos
-    </div>
-  </div>';
-} else {
+
     $user = $_POST['user'];
     $clave = $_POST['clave'];
     $sql = $con->prepare("SELECT * FROM usuarios WHERE user='$user' AND clave ='$clave' ");
@@ -36,7 +30,7 @@ if (empty($_POST['user']) and empty($_POST['clave'])) {
 
     }
 }
-}
+
 // para cerrar la conexion a la bd se asigna null a la variable que construye el pdo
 $sql=null;
 ?>
