@@ -12,7 +12,7 @@
     <div class="container">
 
         <!-- formulario de registro -->
-        <form class="col-md-7 m-auto row g-3 needs-validation" action="../controlador/con.insert.php" method="post">
+        <form class="col-md-7 m-auto row g-3 needs-validation" action="../controlador/con.insert.php" method="post" novalidate>
 
             <div class=" col-md form-floating mb-3">
                 <input type="text" class="form-control" id="nombres" placeholder="Jhon" required>

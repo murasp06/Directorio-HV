@@ -1,7 +1,7 @@
 <?php include '../Templades/header1.php'?>
 
     <main  class="form-signin w-100  text-center  m-auto my-auto lg-p-5">
-        <form class="col-md-4 p-lg-5 mx-auto  p-5">
+        <form class="col-md-4 p-lg-5 mx-auto  p-5"  action="../controlador/con.login.php" method="post">
             <a href="/">
                 <img class="mb-4 rounded-4" src="/image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" alt="" width="92" height="87">
             </a>
