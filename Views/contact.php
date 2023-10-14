@@ -1,4 +1,4 @@
-<?php include '/workspaces/PWA_AMFICA_V.0.1/model/config.general.php' ?>
+<?php include '../model/config.general.php' ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -115,4 +115,4 @@
             </form>
         </div>
 
-        <?php include '/workspaces/PWA_AMFICA_V.0.1/Templades/footer.php' ?>
+        <?php include '../Templades/footer.php' ?>
