@@ -136,7 +136,7 @@
                     <div class="card mb-4 rounded-3 shadow-sm">
                         <div style="box-shadow: 0px 5px 30px -9px;background-image: linear-gradient(to top, aliceblue 50%,white   100%)" class="card-body">
                             <h5 style="color: rgba(215, 162, 30, 0.796);" class="p-3 card-title pricing-card-title">Te ahorraremos las <br>filas </h5>
-                            <p>No Tendrás que buscar papeles que nadie sabe donde quedaron, <br>Ya que nosotros mantendremos guardada y actualizada toda la información de tus mascotas</p>
+                            <p>Podras agendar citas para ahorrar tiempoy podras cancelarla 30 minutos antes, en caso de no poder llegar</p>
                         </div>
                     </div>
                 </div>

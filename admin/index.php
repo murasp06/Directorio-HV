@@ -3,14 +3,14 @@
  $id_admin=$_SESSION['id'];
  $id_rol=$_SESSION['rol'];
 if ($id_admin == null || $id_rol == '') {
-  / echo 'usted no tiene autorizacion';
+    //echo 'usted no tiene autorizacion';
     header("location: ../index.php");
     session_destroy();
     die();
 }else
     if($id_admin == 1 and $id_rol == 1){?> 
-     <?php include("/workspaces/PWA_AMFICA_V.0.1/model/config.general.php"); ?>
-       <?php include("/workspaces/PWA_AMFICA_V.0.1/Templades/header.php");?>
+     <?php include("../model/config.general.php"); ?>
+       <?php include("../Templades/header.php");?>
         <div class="container-expand-lg my-3 text-center">
             <div style=" background-color: rgba(255, 0, 0, 0.607);" class="alert-expand-lg alert-danger " role="alert">
                 <span style="color: #1c1c1c;" class="">¡¡<strong><?php echo "Murap06 " ?></strong> Bienvenido(s) Al Panel De Administradores!!</span>
@@ -108,5 +108,5 @@ if ($id_admin == null || $id_rol == '') {
         </div>
 <?php  
     }
-include("/workspaces/PWA_AMFICA_V.0.1/Templades/footer.php");
+include("../Templades/footer.php");
 ?>

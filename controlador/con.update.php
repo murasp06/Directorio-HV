@@ -6,7 +6,7 @@ session_start();
 if ($_SESSION['id'] == 1) {
 
     $id_usuario = $_GET['id'];
-    require('/workspaces/PWA_AMFICA_V.0.1/model/conexion_bd.php');
+    require('../model/conexion_bd.php');
 
     $id_usuario = $_POST['id_usuario'];
     $user = $_POST['user'];
@@ -36,7 +36,7 @@ if ($_SESSION['id'] == 1) {
     //cerrar la conexion a la bd.
     //mysqli_close($con);
 } else {
-    require('/workspaces/PWA_AMFICA_V.0.1/model/conexion_bd.php');
+    require('../model/conexion_bd.php');
 
     $id_usuario = $_POST['id_usuario'];
     // $user = $_POST['user'];
@@ -62,27 +62,27 @@ if ($_SESSION['id'] == 1) {
         $sql = $con->prepare(" UPDATE usuarios SET nombre='$nombre',apellidos='$apellidos',edad='$edad',ciudad='$ciudad',num_celular='$num_celular',correo='$correo',direccion='$direccion',foto_user='$foto_userConten',activo= DEFAULT  WHERE id_usuario='$id_usuario' ");
         $sql->execute();
         if ($sql) {
-            // $id_usuario = $_POST['id_usuario'];
-            // // $user = $_POST['user'];
-            // // $clave = $_POST['clave'];
-            // $nombre = $_POST['nombre'];
-            // $apellidos = $_POST['apellidos'];
-            // $edad = $_POST['edad'];
-            // $ciudad = $_POST['ciudad'];
-            // $num_celular = $_POST['num_celular'];
-            // $correo = $_POST['correo'];
-            // $direccion = $_POST['direccion'];
-            // $foto_user = $_FILES['foto_user'];
-            //  $tmp_foto=$_FILES["tmp_name"];
-            //  $direcion_destino="../img/user";
+             $id_usuario = $_POST['id_usuario'];
+             // $user = $_POST['user'];
+             // $clave = $_POST['clave'];
+             $nombre = $_POST['nombre'];
+             $apellidos = $_POST['apellidos'];
+             $edad = $_POST['edad'];
+             $ciudad = $_POST['ciudad'];
+             $num_celular = $_POST['num_celular'];
+             $correo = $_POST['correo'];
+             $direccion = $_POST['direccion'];
+             $foto_user = $_FILES['foto_user'];
+              $tmp_foto=$_FILES["tmp_name"];
+              $direcion_destino="../img/user";
 
 
-            //   $nombre_imagen = $_FILES['foto_user']['name'];
-            //   $tipo_imagen = $_FILES['foto_user']['type'];
-            //   $tamano_imagen = $_FILES['foto_user']['size'];
-            // $check = $_FILES["foto_user"]["tmp_name"];
-            //   $foto_user = $_FILES['foto_user']['tmp_name'];
-            //   $foto_userConten = addslashes($foto_user);
+               $nombre_imagen = $_FILES['foto_user']['name'];
+               $tipo_imagen = $_FILES['foto_user']['type'];
+               $tamano_imagen = $_FILES['foto_user']['size'];
+               $check = $_FILES["foto_user"]["tmp_name"];
+               $foto_user = $_FILES['foto_user']['tmp_name'];
+               $foto_userConten = addslashes($foto_user);
 
 
             if ($check != false) {

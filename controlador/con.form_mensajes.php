@@ -1,5 +1,5 @@
 <?php
-require('/workspaces/PWA_AMFICA_V.0.1/model/conexion_bd.php');
+require('../model/conexion_bd.php');
 
 $nombre = $_POST['nombre'];
 $correo = $_POST['correo'];

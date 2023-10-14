@@ -8,8 +8,7 @@
             <h1 class=" fs-1 h3 mb-3 fw-normal">Ingresar</h1>
 
             <?php 
-            // include("../model/conexion_bd.php");
-          //  require("/workspaces/PWA_AMFICA_V.0.1/controlador/con.login.php") ?>
+            include("../model/conexion_bd.php");?>
 
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floating" placeholder="name.veras" required>

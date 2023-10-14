@@ -31,7 +31,7 @@ if (isset($_FILES['foto_mascota'])) {
         $foto_mascotaConten = addslashes(file_get_contents($foto_mascota));
         if ($tamano_imagen <= 3000000) {
             if ($tipo_imagen == "image/jpeg" || $tipo_imagen == "image/jpg" || $tipo_imagen == "image/png" || $tipo_imagen == "image/gif") {
-                require('/workspaces/PWA_AMFICA_V.0.1/model/conexion_bd.php');
+                require('../model/conexion_bd.php');
             
                 // echo $id_usuario, $cc_animal, $especie, $fecha_nacimiento, $foto_mascota, $raza, $sexo, $nombre_mascota;
                 $sql =$con->prepare("INSERT INTO mascotas (nombre_mascota,doc_animal,especie,raza,sexo,fecha_nacimiento,id_usuario,foto_mascota)
@@ -49,7 +49,7 @@ if (isset($_FILES['foto_mascota'])) {
         }
     }
 } else {
-    require('/workspaces/PWA_AMFICA_V.0.1/model/conexion_bd.php');
+    require('../model/conexion_bd.php');
    
     // echo $id_usuario, $cc_animal, $especie, $fecha_nacimiento, $foto_mascota, $raza, $sexo, $nombre_mascota;
     $sql =$con->prepare("INSERT INTO mascotas (nombre_mascota,doc_animal,especie,raza,sexo,fecha_nacimiento,id_usuario,)

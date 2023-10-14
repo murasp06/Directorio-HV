@@ -5,7 +5,7 @@ $id_usuario=$_GET['id'];
 
 if ($_SESSION['id'] == 1) {
 
-    include("/workspaces/PWA_AMFICA_V.0.1/model/conexion_bd.php");
+    include("../model/conexion_bd.php");
     $sql=$con->prepare("UPDATE usuarios SET activo=0 WHERE id_usuario='$id_usuario'");
     $sql->execute();
 
@@ -22,7 +22,7 @@ if ($_SESSION['id'] == 1) {
 }else{
     // session_destroy();
     // exit;
-    include("/workspaces/PWA_AMFICA_V.0.1/model/conexion_bd.php");
+    include("../model/conexion_bd.php");
 
     $sql =$con->prepare("UPDATE usuarios SET activo=0 WHERE id_usuario='$id_usuario'");
     $sql->execute();
