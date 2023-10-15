@@ -84,13 +84,13 @@
                 <!-- gmail -->
                 <img style="height: 50px;width: 50px;" src="/image/gmail-logo.png" alt="img-gmail">
                 <h4>Dirección De Envió</h4>
-                <a style="text-decoration: none;color: black; " href="mailto:amfica@gmail.com">amfica@gmail.com</a>
+                <a style="text-decoration: none;color: black; " href="mailto:amficaonline@outlok.com">amficaonline@outlok.com</a>
             </div>
             <div>
                 <!-- wassap -->
                 <img style="height: 50px;width: 50px;" src="/image/logo_wasap.png" alt="img-wasstapp">
                 <h4>Hablar De Negocios</h4>
-                <a style="text-decoration: none;color: black;" href="tel:+573135258750">+573135258750</a>
+                <a style="text-decoration: none;color: black;" href="tel:+573135258750">3135258750-clikea'</a>
             </div>
         </div>
 
