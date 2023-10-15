@@ -21,9 +21,9 @@ if ($id_admin == null || $id_rol == '') {
             <div class="text-center">
                 <h1 class="position-relative border-bottom">Panel de control</h1>
                 <!-- contenedor de las entidades -->
-                <div class="text-center overflow-scroll">
-                    <div class="container  " id="featured-3">
-                        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 bg-body-tertiary">
+                <div class="text-center overflow">
+                    <div class="container" id="featured-3">
+                        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 ">
                             <!-- contenedor para conteo de usuarios(user) -->
                             <div class="feature col bg-info p-3 rounded-5">
                                 <div style="border-radius: 20px;" class="feature-icon d-inline-flex align-items-center justify-content-center  bg-gradient fs-2 mb-3">
