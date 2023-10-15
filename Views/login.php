@@ -11,11 +11,11 @@
             include("../model/conexion_bd.php");?>
 
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floating" placeholder="name.veras" required>
+                <input type="text" class="form-control" id="floating" name="user" placeholder="name.veras" required>
                 <label for="floating">Usuario</label>
             </div>
             <div class="form-floating my-3">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                <input type="password" class="form-control" id="floatingPassword" name="clave" placeholder="Password" required>
                 <label for="floatingPassword">Contraseña</label>
             </div>
 
