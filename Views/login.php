@@ -41,8 +41,10 @@
                     Remember me
                 </label>
             </div> -->
-        <button class="btn btn-danger w-100 py-2 mb-3 btn-outline-warning fs-4" name="btnlogin" type="submit">loguear</button>
+            <input type="submit" name="btnlogin" class="btn btn-danger w-100 py-2 mb-3 btn-outline-warning fs-4" value="Loguear">
         <a href="">recuperar contraseña</a> <span>o</span> <a href="records.php">Crear cuenta</a>
     </form>
 
     <?php include '../Templades/footer1.php' ?>
+
+    
