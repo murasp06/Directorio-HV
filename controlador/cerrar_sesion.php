@@ -4,7 +4,7 @@ $varsesion = $_SESSION['usuario'];
 $_GET['id'];
 if(isset($_GET['id'])){
     session_destroy();
-    header("location: ../views/login.php");
+    header("location: ../Views/login.php");
 
 }else
 if($varsesion == null || $varsesion == ''){
@@ -13,5 +13,5 @@ if($varsesion == null || $varsesion == ''){
 }
  
 session_destroy();
-header("location: ../views/login.php")
+header("location: ../Views/login.php")
 ?>

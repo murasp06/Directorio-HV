@@ -45,7 +45,7 @@
         ?>
         <h3 class="my-2  mx-auto ">Ficha de Salud</h3>
         <div class="my-3 mx-auto">
-            <a href="usuarios.php" class="btn btn-primary  m-2 position-absolute top-0 start-0">Volver</a>
+            <a href="User.php" class="btn btn-primary  m-2 position-absolute top-0 start-0">Volver</a>
 
 
             <div style="box-shadow: 0px 15px 8px -6px; background-image: linear-gradient(to top, aliceblue 50%,white   100%)" class="col-md-6 mb-4 mx-auto  d-sm-flex  overflow-hidden">

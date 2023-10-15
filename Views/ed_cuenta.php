@@ -30,7 +30,7 @@
         $img = $infousuario->foto_user;
 
     ?>
-        <a class="btn btn-primary m-3" href="usuarios.php">Volver</a>
+        <a class="btn btn-primary m-3" href="User.php">Volver</a>
         <div style="text-align: center;" class="">
             <img style=" margin-top: 1%;height: 150px;border-radius: 80px;margin-right: 5px;text-align: center;" src="../img/config amfica.png" alt="logo configuracion AMFICA">
         </div>
