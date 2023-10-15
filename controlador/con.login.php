@@ -18,10 +18,11 @@ if (empty($_POST['user']) and empty($_POST['clave'])) {
     foreach ($registros as $dato);
     //$rol=$dato->id_rol;
     if($dato->id_rol == 5 AND $dato->activo == 1 ) {    
-      session_start();
-      $_SESSION['id']=$dato->id_usuario;
-      $_SESSION['usuario']=$dato->nombre." ".$dato->apellidos;
-      header("location: ../Views/user.php");
+      // session_start();
+      // $_SESSION['id']=$dato->id_usuario;
+      // $_SESSION['usuario']=$dato->nombre." ".$dato->apellidos;
+      // header("location: ../Views/user.php");
+      echo "Funciona ";
       
     }elseif($dato->id_rol == 1 AND $dato->activo == 11){
       session_start();
