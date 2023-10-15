@@ -1,6 +1,6 @@
 <?php
 
-require('../model/conexion_bd.php');
+include('../model/conexion_bd.php');
 
 if(!empty($_POST["btnlogin"])){
 if (empty($_POST['user']) and empty($_POST['clave'])) {
