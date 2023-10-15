@@ -74,19 +74,19 @@
         </div>
         <!-- contenedor de datos direccion,contacto.gmail -->
         <div style="text-align: center;justify-content: space-around;margin-top: 100px;" class="container d-flex">
-            <div>
+            <div class="m-1 p-2">
                 <!-- direccion -->
                 <img style="height: 50px;width: 50px;" src="/image/location.png" alt="img-direccion">
                 <h4>Dirección</h4>
                 <p>Medellín-Antioquia-Colombia</p>
             </div>
-            <div>
+            <div class="m-1 p-2">
                 <!-- gmail -->
                 <img style="height: 50px;width: 50px;" src="/image/gmail-logo.png" alt="img-gmail">
                 <h4>Dirección De Envió</h4>
                 <a style="text-decoration: none;color: black; " href="mailto:amficaonline@outlook.com">amficaonline@outlook.com</a>
             </div>
-            <div>
+            <div class="m-1 p-2">
                 <!-- wassap -->
                 <img style="height: 50px;width: 50px;" src="/image/logo_wasap.png" alt="img-wasstapp">
                 <h4>Hablar De Negocios</h4>
