@@ -17,7 +17,9 @@ if ($varsesion == null || $varsesion == '') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Principal-AMFICA!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="" type="image/x-icon,png">
+    <link rel="shortcut icon" href="../image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" type="image/x-icon/png">
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
@@ -25,49 +27,49 @@ if ($varsesion == null || $varsesion == '') {
     </style>
 </head>
 
-<body style="background-color: white;">
+<body>
     <header>
         <!-- menu lateral -->
-        <div class="navbar fixed navbar-dark bg-dark ">
+        <div style="background-color: black;" class="navbar fixed navbar-dark ">
             <div class="container">
-
+                <!-- <a href="#" class="navbar-brand text-start  d-flex"> -->
                 <button class="btn d-flex " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                    <img style="border-radius: 25px;" src="../img/logo.jpg" width="45" height="35" alt="">
-                    <h3 style="color: rgba(215, 162, 30, 0.796);">AMFICA!</h3>
+                    <img class=" rounded-4" src=" /image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" width="95" height="65" alt="">
+                    <h3 class="text-warning">AMFICA!System</h3>
                 </button>
-
+                <!-- </a> -->
                 <div style="background-color:#1c1c1c;" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header">
                         <h5 style="color: white;" class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menú</h5>
                         <button style="background-color: white;" type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-
                     <div class="offcanvas-body">
-                        <a style="color: white;" href="../views/tiendas.view.php" class="dropdown-item" type="button">Tienda</a>
-                        <a style="color: white;" href="blog.php" class="dropdown-item" type="button">blog de noticias</a>
-                        <!-- <a style="color: white;" href="#" class="dropdown-item" type="button">citas</a> -->
-                        <!-- <a style="color: white;" href="#" class="dropdown-item" type="button">Foro</a> -->
+                        <a style="color: white;" href="" class="dropdown-item" type="button">Tienda</a>
+                        <a style="color: white;" href="" class="dropdown-item" type="button">Noticias_blog</a>
+                        <!-- <a style="color: white;" href="" class="dropdown-item" type="button">Citas</a> -->
+                        <!-- <a style="color: white;" href="" class="dropdown-item" type="button">Foro</a> -->
+                        <a style="color: white;" href="<?php //echo $ruta;
+                                                        ?>#" class="dropdown-item" type="button">Foro</a>
                     </div>
                 </div>
                 <!-- ................... -->
+
                 <!-- menu de cabezera -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse text-end" id="navbarHeader">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                        <li class="nav-item px-2 text-white "><a class="nav-link active"></a></li>
-
-                    </ul>
-
+                <div class="collapse navbar-collapse  justify-content-end text-end" id="navbarHeader">
+                    <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                            <li class="nav-item px-2 text-white "><a class="nav-link active"></a></li>
+                        </ul> -->
                     <select style="background-color: #1c1c1c;color:white" name="idioma" id="">
                         <option value=""><a href="#" class="nav-link px-2 text-white">Español</a></option>
                         <option value=""><a href="#" class="nav-link px-2 text-white">Ingles</a></option>
                     </select>
-                    <a href="ed_cuenta.php?id=<?php echo $id = $_SESSION['id']; ?>" class="nav-link px-2 mt-2 text-white">Cuenta</a>
-                    <!-- <a href="#" class="nav-link px-2 text-white">Cuenta</a> -->
-                    <a href="../controlador/cerrar_sesion.php?id=" class="btn btn-warning">Cerrar sesion</a>
+
+                    <a href="#" class="nav-link px-2 text-white m-2">Cuenta</a>
+                    <a type="button" class="btn btn-outline-warning align-top" href="../controlador/cerrar_sesion.php?id=">Cerrar sesion</a>
                 </div>
                 <!-- ------------ -->
             </div>
@@ -95,7 +97,7 @@ if ($varsesion == null || $varsesion == '') {
             $sql->execute();
             $consulinfomascota = $sql->fetchAll(PDO::FETCH_OBJ);
             ?>
-                <!-- boton del registro de mascotas -->
+            <!-- boton del registro de mascotas -->
             <button style="color: black; border:1px solid gainsboro; background-color:gold;" type="button" class="btn btn-warning mb-5 col-auto " data-bs-toggle="modal" data-bs-target="#registro_mascota">
                 Añadir amigo fiel
             </button>
@@ -150,7 +152,7 @@ if ($varsesion == null || $varsesion == '') {
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -300,7 +302,7 @@ if ($varsesion == null || $varsesion == '') {
         </div>
         <?php //cerrar la conexion a la bd.
         // para cerrar la conexion a la bd se asigna null a la variable que construye el pdo
-        $sql=null;
+        $sql = null;
         ?>
         <div class="d-none d-sm-block">
             <img class="mx-end-end" style="width: 350px; height: 400px; border-radius: 70px; padding: 8%;" src="../img/29762171_7617417.jpg" alt="Imagen de Freepik"><!--Imagen de <a href="https://www.freepik.es/vector-gratis/silueta-perro-gato-diseno-plano_42111627.htm#query=perro%20y%20gato%20siluetas&position=14&from_view=search&track=ais">Freepik</a>-->
@@ -308,4 +310,4 @@ if ($varsesion == null || $varsesion == '') {
     </section>
 
 
-<?php include("../Templades/footer.php") ?>
+    <?php include("../Templades/footer.php") ?>
