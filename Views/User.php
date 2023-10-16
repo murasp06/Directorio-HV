@@ -35,7 +35,7 @@ if ($varsesion == null || $varsesion == '') {
                 <!-- <a href="#" class="navbar-brand text-start  d-flex"> -->
                 <button class="btn d-flex " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     <img class=" rounded-4" src=" /image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" width="95" height="65" alt="">
-                    <h3 class="text-warning">AMFICA!System</h3>
+                    <h3 class="text-warning">AMFICA!</h3>
                 </button>
                 <!-- </a> -->
                 <div style="background-color:#1c1c1c;" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -228,7 +228,7 @@ if ($varsesion == null || $varsesion == '') {
 
         </div>
         <div class="d-none d-sm-block">
-            <img class="mx-end-end" style="width: 350px; height: 520px; border-radius: 70px; padding: 8%;" src="../img/8962397.jpg" alt="Imagen de Freepik">
+            <img class="mx-end-end" style="width: 350px; height: 520px; border-radius: 70px; padding: 8%;" src="../image/8962397.jpg" alt="Imagen de Freepik">
         </div>
     </section>
 
@@ -242,7 +242,7 @@ if ($varsesion == null || $varsesion == '') {
         ?>
         <section class="d-flex d-sm-row ms-0">
             <div class="d-none d-sm-block">
-                <img style="width: 350px; height: 350px; border-radius: 70px; padding: 8%;" src="../img/8796021.jpg" alt="">
+                <img style="width: 350px; height: 350px; border-radius: 70px; padding: 8%;" src="../image/8796021.jpg" alt="">
             </div>
 
             <div style=" background-color: purple; padding: 15px; border-top-left-radius: 35px; border-bottom-left-radius: 35px;" class="row   mb-3 text-center d-lg-col-8 col align-self-end ms-1">
@@ -305,7 +305,7 @@ if ($varsesion == null || $varsesion == '') {
         $sql = null;
         ?>
         <div class="d-none d-sm-block">
-            <img class="mx-end-end" style="width: 350px; height: 400px; border-radius: 70px; padding: 8%;" src="../img/29762171_7617417.jpg" alt="Imagen de Freepik"><!--Imagen de <a href="https://www.freepik.es/vector-gratis/silueta-perro-gato-diseno-plano_42111627.htm#query=perro%20y%20gato%20siluetas&position=14&from_view=search&track=ais">Freepik</a>-->
+            <img class="mx-end-end" style="width: 350px; height: 400px; border-radius: 70px; padding: 8%;" src="../image/29762171_7617417.jpg" alt="Imagen de Freepik"><!--Imagen de <a href="https://www.freepik.es/vector-gratis/silueta-perro-gato-diseno-plano_42111627.htm#query=perro%20y%20gato%20siluetas&position=14&from_view=search&track=ais">Freepik</a>-->
         </div>
     </section>
 
