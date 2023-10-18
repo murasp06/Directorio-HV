@@ -10,7 +10,7 @@
  }else
      if($id_admin == 1 and $id_rol == 1){?>
 
-<?php include("/workspaces/PWA_AMFICA_V.0.1/Templades/header.php");?>
+<?php include("../Templades/header.php");?>
 
 <div class="container">
     <div class="row">
@@ -149,7 +149,7 @@
                         ?>
                     <tbody>
                         <?php
-                            include("../model/config.php");
+                            include("../model/funciones.php");
                             foreach ($consul_usuarios as $usuario) {
                             $img = $usuario->foto_user;
                         ?>
@@ -194,5 +194,5 @@
 
 <?php
     }
-include("/workspaces/PWA_AMFICA_V.0.1/Templades/footer.php")
+include("../Templades/footer.php")
 ?>
