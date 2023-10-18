@@ -10,8 +10,8 @@
  }else
      if($id_admin == 1 and $id_rol == 1){
 
-include("/workspaces/PWA_AMFICA_V.0.1/Templades/header.php");
-include("/workspaces/PWA_AMFICA_V.0.1/model/config.general.php")
+include("../Templades/header.php");
+include("../model/config.general.php")
 ?>
 
 <div class="container">
@@ -60,5 +60,5 @@ include("/workspaces/PWA_AMFICA_V.0.1/model/config.general.php")
 
 <?php
     }
-include("/workspaces/PWA_AMFICA_V.0.1/Templades/footer.php")
+include("../Templades/footer.php")
 ?>
