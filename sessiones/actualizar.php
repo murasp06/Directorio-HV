@@ -10,7 +10,7 @@
  }else
      if($id_admin == 1 and $id_rol == 1){
 
-include("/workspaces/PWA_AMFICA_V.0.1/Templades/header.php");
+include("../Templades/header.php");
 $id_usuario = $_GET['id'];
 // if ($_SESSION['admin'] == 1) { 
 
@@ -45,10 +45,11 @@ foreach ($datos_user as $datos) {
     <?php }
 // para cerrar la conexion a la bd se asigna null a la variable que construye el pdo
 $sql=null;
+ $con=null:
     ?>
 
    
     <?php
     }
-    include("/workspaces/PWA_AMFICA_V.0.1/Templades/footer.php");
+    include("../Templades/footer.php");
     ?>
