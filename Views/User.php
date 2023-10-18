@@ -68,7 +68,7 @@ if ($varsesion == null || $varsesion == '') {
                         <option value=""><a href="#" class="nav-link px-2 text-white">Ingles</a></option>
                     </select>
 
-                    <a href="#" class="nav-link px-2 text-white m-2">Cuenta</a>
+                    <a href="ed_cuenta.php" class="nav-link px-2 text-white m-2">Cuenta</a>
                     <a type="button" class="btn btn-outline-warning align-top" href="../controlador/cerrar_sesion.php?id=">Cerrar sesion</a>
                 </div>
                 <!-- ------------ -->
