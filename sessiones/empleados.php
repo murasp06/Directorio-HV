@@ -10,7 +10,7 @@
  }else
  if($id_admin == 1 and $id_rol == 1){
 
-    include ("/workspaces/PWA_AMFICA_V.0.1/Templades/header.php");
+    include ("../Templades/header.php");
 ?>
 
 <div class="container">
@@ -42,7 +42,7 @@
                         </tr>
                         <?php
                         //foreach ($queryresultado as $row):
-                            include("../../model/config.php")
+                            include("../model/funciones.php")
                         ?>
                     <tbody>
                         <tr>
@@ -79,5 +79,5 @@
 
 <?php
     }
-include("/workspaces/PWA_AMFICA_V.0.1/Templades/footer.php")
+include("../Templades/footer.php")
 ?>
