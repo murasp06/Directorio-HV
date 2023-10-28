@@ -20,7 +20,7 @@ VALUES ('$user','$clave','$nombre','$apellidos','$edad','$documento','$ciudad','
 $sql->execute();
 
 if($sql){
-    header("location: ../views/login.php");
+    header("location: ../Views/User.php");
 }else{
     echo 'no registro..';
 }
