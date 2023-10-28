@@ -10,7 +10,11 @@
             <img class="mb-4 rounded-4" src="/image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" alt="" width="92" height="87">
         </a>
         <h1 class=" fs-1 h3 mb-3 fw-normal">Ingresar</h1>
-
+        <?php
+            $id= $_GET['id']; 
+            if($id == 01){
+            echo '<div style="background-color: rgba #a3cfbb;color: green;padding:1px;">usuario Registrado!</div>';
+            }
         <?php
         include("../model/conexion_bd.php"); ?>
 
