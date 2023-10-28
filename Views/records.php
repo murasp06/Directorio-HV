@@ -10,12 +10,18 @@
         <a href="login.php" class="text-warning ms-5 end">Iniciar session</a>
     </div>
     <div class="container">
-
+        <?php
+        $id= $_GET['id']; 
+        if($id == 02){
+        echo '<div style="background-color: rgba #a3cfbb;color: green;padding:1px;">intente de nuevo el usuario no se pudo registrar!</div>';
+        }
+        ?>
+       
         <!-- formulario de registro -->
-        <form class="col-md-7 m-auto row g-3 needs-validation" action="../controlador/con.insert.php" method="post" novalidate>
+        <form class="col-md-7 m-auto row g-3 needs-validation" action="../controlador/con.insert.php" method="post" >
 
             <div class=" col-md form-floating mb-3">
-                <input type="text" class="form-control" id="nombres" placeholder="Jhon" required>
+                <input type="text" class="form-control" id="nombres" name="nombre" placeholder="Jhon" required>
                 <label for="nombres">Nombres</label>
                 <div class="valid-feedback">
                     Se ve bien!
@@ -23,7 +29,7 @@
             </div>
 
             <div class="col-md form-floating mb-3">
-                <input type="text" class="form-control" id="apellidos" placeholder="Asprilla" required>
+                <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Asprilla" required>
                 <label for="apellidos">Apellidos</label>
                 <div class="valid-feedback">
                     Se ve bien!
@@ -31,7 +37,7 @@
             </div>
 
             <div class="col-md form-floating mb-3">
-                <input type="number" class="form-control" id="edad" placeholder="21" required>
+                <input type="number" class="form-control" id="edad" name="edad" placeholder="21" required>
                 <label for="edad">Edad</label>
                 <div class="valid-feedback">
                     Se ve bien!
@@ -39,7 +45,7 @@
             </div>
 
             <div class=" form-floating mb-3">
-                <input type="number" class="form-control" id="documento" placeholder="1234567890" required>
+                <input type="number" class="form-control" id="documento" name="documento" placeholder="1234567890" required>
                 <label for="documento">Documento</label>
                 <div class="valid-feedback">
                     Se ve bien!
@@ -47,7 +53,7 @@
             </div>
 
             <div class="col-md form-floating mb-3">
-                <input type="text" class="form-control" id="usuario" placeholder="jhon_asprilla" required>
+                <input type="text" class="form-control" id="usuario" name="user" placeholder="jhon_asprilla" required>
                 <label for="usuario">Usuario</label>
                 <div class="valid-feedback">
                     Se ve bien!
@@ -55,7 +61,7 @@
             </div>
 
             <div class="col-md form-floating mb-3">
-                <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" required>
+                <input type="password" class="form-control" id="contrasena" name="clave" placeholder="Contraseña" required>
                 <label for="contrasena">Contraseña</label>
                 <div class="valid-feedback">
                     Se ve bien!
@@ -63,21 +69,21 @@
             </div>
 
             <div class="col-md form-floating mb-3">
-                <input type="password" class="form-control" id="ccontrasena" placeholder="Contraseña" required>
+                <input type="password" class="form-control" id="ccontrasen" name="clave1" placeholder="Contraseña" required>
                 <label for="ccontrasena">Confirmar Contraseña</label>
                 <div class="valid-feedback">
                     Se ve bien!
                 </div>
             </div>
             <div class=" form-floating mb-3">
-                <input type="text" class="form-control" id="direccion" placeholder="Cra.12 #45-67 calle principal" required>
+                <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Cra.12 #45-67 calle principal" required>
                 <label for="direccion">Direccion</label>
                 <div class="valid-feedback">
                     Se ve bien!
                 </div>
             </div>
             <div class="col-md form-floating mb-3">
-                <input type="text" class="form-control" id="ciudad" placeholder="Medellin" required>
+                <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Medellin" required>
                 <label for="ciudad">Ciudad</label>
                 <div class="valid-feedback">
                     Se ve bien!
@@ -85,7 +91,7 @@
             </div>
 
             <div class="col-md form-floating mb-3">
-                <input type="number" class="form-control" id="celular" placeholder="3123456789" required>
+                <input type="number" class="form-control" id="celular" name="num_celular" placeholder="3123456789" required>
                 <label for="celular">Numero Celular</label>
                 <div class="valid-feedback">
                     Se ve bien!
@@ -93,7 +99,7 @@
             </div>
 
             <div class="col-md form-floating mb-3">
-                <input type="email" class="form-control" id="correo" placeholder="tu_correo@gmail.com" required>
+                <input type="email" class="form-control" id="correo" name="correo" placeholder="tu_correo@gmail.com" required>
                 <label for="correo">Correo</label>
                 <div class="valid-feedback">
                     Se ve bien!
