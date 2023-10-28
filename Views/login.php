@@ -15,6 +15,7 @@
             if($id == 01){
             echo '<div style="background-color: rgba #a3cfbb;color: green;padding:1px;">usuario Registrado!</div>';
             }
+        ?>
         <?php
         include("../model/conexion_bd.php"); ?>
 
