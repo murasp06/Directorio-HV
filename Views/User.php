@@ -258,7 +258,7 @@ if ($varsesion == null || $varsesion == '') {
             </div>
 
             <div class="d-none d-sm-block">
-                <img class="mx-end-end" style="width: 350px; height: 520px; border-radius: 70px; padding: 8%;" src="../img/8962397.jpg" alt="Imagen de Freepik">
+                <img class="mx-end-end" style="width: 350px; height: 520px; border-radius: 70px; padding: 8%;" src="../image/8962397.jpg" alt="Imagen de Freepik">
             </div>
 
 
@@ -325,7 +325,7 @@ if ($varsesion == null || $varsesion == '') {
             ?>
             <section class="d-flex d-sm-row ms-0">
                 <div class="d-none d-sm-block">
-                    <img style="width: 350px; height: 350px; border-radius: 70px; padding: 8%;" src="../img/29762171_7617417.jpg" alt="">
+                    <img style="width: 350px; height: 350px; border-radius: 70px; padding: 8%;" src="../image/29762171_7617417.jpg" alt="">
                 </div>
 
                 <div style=" background-color: black; padding: 15px; border-top-left-radius: 35px; border-bottom-left-radius: 35px;" class="row   mb-3 text-center d-lg-col-8  col align-self-end ms-1 border border-start-0 border-4 border-warning border-end-0">
