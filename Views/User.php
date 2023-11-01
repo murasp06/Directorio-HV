@@ -97,7 +97,7 @@ if ($varsesion == null || $varsesion == '') {
             <div style=" background-color: black; padding: 15px;border-start-end-radius: 35px; border-end-end-radius: 35px; justify-content: center;" class="container text-center row mb-3 text-center d-lg-col-8 col align-self-start me-1 border border-start-0 border-4 border-warning">
                 <?php
                 $id = $_SESSION['id'];
-                require('../model/config.php');
+                require('../model/funciones.php');
                 //consulta a la tb de mascotas
                 $sql = $con->prepare("SELECT * FROM mascotas WHERE id_usuario='$id' LIMIT 3");
                 $sql->execute();
