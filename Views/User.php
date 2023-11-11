@@ -90,178 +90,171 @@ if ($varsesion == null || $varsesion == '') {
 
 
         <!-- secion donde se muestran las mascotas -->
-        <h3 style="color: goldenrod; margin: 2%;">MIS AMIGOS FIELES</h3>
-        <section class="container-fluid d-flex d-sm-row ">
+        <!-- secion donde se muestran las mascotas -->
+        <h3 style="color: goldenrod; " class="text-center fs-2 p-2 fw-bold">MIS AMIGOS FIELES</h3>
+        <section class="container  d-sm-row  text-center">
+            <?php
+            $id = $_SESSION['id'];
+            require('../model/config.php');
+            //consulta a la tb de mascotas
+            $sql = $con->prepare("SELECT * FROM mascotas WHERE id_usuario='$id' LIMIT 3");
+            $sql->execute();
+            $consulinfomascota = $sql->fetchAll(PDO::FETCH_OBJ);
+            ?>
 
-
-            <div style=" background-color: black; padding: 15px;border-start-end-radius: 35px; border-end-end-radius: 35px; justify-content: center;" class="container text-center row mb-3 text-center d-lg-col-8 col align-self-start me-1 border border-start-0 border-4 border-warning">
+            <div class="d-sm-flex justify-content-evenly">
                 <?php
-                $id = $_SESSION['id'];
-                require('../model/funciones.php');
-                //consulta a la tb de mascotas
-                $sql = $con->prepare("SELECT * FROM mascotas WHERE id_usuario='$id' LIMIT 3");
-                $sql->execute();
-                $consulinfomascota = $sql->fetchAll(PDO::FETCH_OBJ);
+                foreach ($consulinfomascota as $infomascota) {
+                    //header("Content-type: image/jpg");
+                    $imgmasco = $infomascota->foto_mascota;
+
                 ?>
+                    <div class="row ">
+                        <div class="col-lg-8 m-4 ">
 
-
-                <div class="row text-center ">
-                    <?php
-                    foreach ($consulinfomascota as $infomascota) {
-                        //header("Content-type: image/jpg");
-                        $imgmasco = $infomascota->foto_mascota;
-                    ?>
-                        <div class="col m-1">
-                            <div class="card  border border-4 border-danger mt-2" style="width: 17rem;box-shadow: 0px 15px 8px -6px #192028;">
-                                <?php echo '<img class="card-img-top" src="data:image/jpg; base64,' . base64_encode($imgmasco) . '"alt="foto mascotaa" height="150">'; ?>
-                                <!-- <img src="..." class="card-img-top" alt="..."> -->
-                                <div style=" background-color: #202124; " class="card-body ">
-                                    <h5 class="card-title fs-3 text-warning"><?php echo $infomascota->nombre_mascota; ?></h5>
-                                    <p class="card-text text-light">la fecha y hora de la proxima visita es el dia (15) mes (11) año (2023) a las (09:02)</p>
-                                    <a type="button" class="btn btn-outline-danger align-top" href="ficha_salud.php?id=<?php echo $infomascota->id_mascota ?>">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-pulse" viewBox="0 0 16 16">
-                                            <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z" />
-                                            <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z" />
-                                            <path d="M9.979 5.356a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.926-.08L4.69 10H4.5a.5.5 0 0 0 0 1H5a.5.5 0 0 0 .447-.276l.936-1.873 1.138 3.793a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h.5a.5.5 0 0 0 0-1h-.128L9.979 5.356Z" />
-                                        </svg> más
-                                    </a>
-                                    <!-- <a href="#" class="btn btn-primary">Cita</a> -->
-                                </div>
+                            <div class="mx-auto p-2 " style="width:200px; height:200px">
+                                <?php echo '<img style="border-radius: 0px 80px 80px 90px" class="card-img-top border border-danger" src="data:image/jpg; base64,' . base64_encode($imgmasco) . '"alt="foto mascotaa" width="100%" height="100%">'; ?>
                             </div>
-                        </div>
-                    <?php } ?>
-                </div>
-
-                <div class="mt-4">
-
-                    <!-- modal para registrar macotas -->
-
-                    <!-- boton del modal para registro de mascotas -->
-                    <button class="btn align-top mb-4 col-auto  btn-outline-light me-4" type="button" class="btn btn-warning mb-5 col-auto " data-bs-toggle="modal" data-bs-target="#registro_mascota">
-                        Añadir amigo fiel
-                    </button>
-
-                    <!-- modal para registro de mascotas registro de mascota -->
-                    <div class="modal fade" id="registro_mascota" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Registro Amig@s Fieles</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-
-                                <div class="modal-body">
-                                    <div class="container text-center">
-                                        <div style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.853) -15%, goldenrod 50%);@media screen and (max-width:1074px){ .container{ px-4 py-5 my-5}}" class="container px-4 py-5 my-0.1">
-
-                                            <h2>Registrar Amig@ Fiel</h2>
-                                            <form class="row g-3 needs-validation" action="../controlador/con.insertmas.php" method="post" enctype="multipart/form-data">
-
-                                                <div class="col-auto">
-                                                    <input type="text" class="form-control" id="1" name="nombre_mascota" placeholder="Nombre" required>
-
-                                                </div>
-                                                <div class="col-auto">
-                                                    <input type="text" class="form-control" id="2" name="especie" placeholder="Especie" required>
-
-                                                </div>
-                                                <div class="col-auto">
-                                                    <input type="text" class="form-control" id="3" name="raza" placeholder="Raza" required>
-
-                                                </div>
-                                                <div class="col-auto">
-                                                    <input type="text" class="form-control" id="4" name="sexo" placeholder="Sexo" required>
-
-                                                </div>
-                                                <div class="col-auto">
-                                                    <input type="text" class="form-control" id="5" name="fecha_nacimiento" placeholder="Fecha de nacimiento de la mascota" required>
-
-                                                </div>
-                                                <div class="col-auto overflow-auto ">
-                                                    <label style="color: white;" for="foto_mascota" class="form-label">monte una foto de la mascota</label><br>
-                                                    <input style="color: white;" type="file" class="col-auto" id="foto_mascota" name="foto_mascota"><br>
-                                                </div>
-                                                <div class="col-12">
-                                                    <button class="btn btn-warning" type="submit">Registrar</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                </div>
-
-                            </div>
+                            <h2 style="color: goldenrod;" class="text-uppercase fw-medium"><?php echo $infomascota->nombre_mascota; ?></h2>
+                            <p>la fecha y hora de la proxima visita es el dia (15) mes (11) año (2023) a las (09:02)</p>
+                            <!-- <p><a class="btn btn-secondary" href="#">Ver Detalles &raquo;</a></p> -->
+                            <a type="button" class="btn btn-outline-danger align-top" href="ficha_salud.php?id=<?php echo $infomascota->id_mascota ?>">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-pulse" viewBox="0 0 16 16">
+                                    <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z" />
+                                    <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z" />
+                                    <path d="M9.979 5.356a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.926-.08L4.69 10H4.5a.5.5 0 0 0 0 1H5a.5.5 0 0 0 .447-.276l.936-1.873 1.138 3.793a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h.5a.5.5 0 0 0 0-1h-.128L9.979 5.356Z" />
+                                </svg> Ver Detalles
+                            </a>
                         </div>
                     </div>
-                    <!-- fin delmodal -->
 
+                <?php } ?>
+            </div>
 
+            <div class="mt-4">
 
-                    <!-- modal para ver todas las mascotas  -->
+                <!-- modal para registrar macotas -->
 
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-outline-light align-top mb-4 col-auto " data-bs-toggle="modal" data-bs-target="#vermascotas">
-                        Ver todos
-                    </button>
-                    <!-- Modal -->
-                    <div class="modal fade" id="vermascotas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-scrollable">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Tod@s Tus Amigos Fieles</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body text-center ">
-                                    <div class="text-center ms-auto">
-                                        <?php
-                                        //consulta a la tb de mascotas
-                                        $sql = $con->prepare("SELECT * FROM mascotas WHERE id_usuario='$id'");
-                                        $sql->execute();
-                                        $consulinfomascota = $sql->fetchAll(PDO::FETCH_OBJ);
-                                        ?>
-                                        <?php
-                                        foreach ($consulinfomascota as $infomascota) {
-                                            //header("Content-type: image/jpg");
-                                            $imgmasco = $infomascota->foto_mascota;
-                                        ?>
-                                            <div class="col">
-                                                <div class="card  border border-4 border-danger mt-2" style="width: 17rem;">
-                                                    <?php echo '<img class="card-img-top" src="data:image/jpg; base64,' . base64_encode($imgmasco) . '"alt="foto mascotaa" height="150">'; ?>
-                                                    <!-- <img src="..." class="card-img-top" alt="..."> -->
-                                                    <div class="card-body text-bg-dark">
-                                                        <h5 class="card-title fs-3 text-warning"><?php echo $infomascota->nombre_mascota; ?></h5>
-                                                        <a type="button" class="btn btn-outline-danger align-top" href="ficha_salud.php?id=<?php echo $infomascota->id_mascota ?>">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-pulse" viewBox="0 0 16 16">
-                                                                <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z" />
-                                                                <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z" />
-                                                                <path d="M9.979 5.356a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.926-.08L4.69 10H4.5a.5.5 0 0 0 0 1H5a.5.5 0 0 0 .447-.276l.936-1.873 1.138 3.793a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h.5a.5.5 0 0 0 0-1h-.128L9.979 5.356Z" />
-                                                            </svg> más
-                                                        </a>
-                                                        <!-- <a href="#" class="btn btn-primary">Cita</a> -->
-                                                    </div>
-                                                </div>
+                <!-- boton del modal para registro de mascotas -->
+                <button class="btn align-top mb-4 col-auto  btn-outline-dark me-4" type="button" class="btn btn-warning mb-5 col-auto " data-bs-toggle="modal" data-bs-target="#registro_mascota">
+                    Añadir amigo fiel
+                </button>
+
+                <!-- modal para registro de mascotas registro de mascota -->
+                <div class="modal fade" id="registro_mascota" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Registro Amig@s Fieles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                <div class="container text-center">
+                                    <div style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.853) -15%, goldenrod 50%);" class="container px-4 py-5 my-0.1">
+
+                                        <h2>Registrar Amig@ Fiel</h2>
+                                        <form class="row g-3 needs-validation" action="../controlador/con.insertmas.php" method="post" enctype="multipart/form-data">
+
+                                            <div class="col-auto">
+                                                <input type="text" class="form-control" id="1" name="nombre_mascota" placeholder="Nombre" required>
+
                                             </div>
-                                        <?php } ?>
+                                            <div class="col-auto">
+                                                <input type="text" class="form-control" id="2" name="especie" placeholder="Especie" required>
+
+                                            </div>
+                                            <div class="col-auto">
+                                                <input type="text" class="form-control" id="3" name="raza" placeholder="Raza" required>
+
+                                            </div>
+                                            <div class="col-auto">
+                                                <input type="text" class="form-control" id="4" name="sexo" placeholder="Sexo" required>
+
+                                            </div>
+                                            <div class="col-auto">
+                                                <input type="text" class="form-control" id="5" name="fecha_nacimiento" placeholder="Fecha de nacimiento de la mascota" required>
+
+                                            </div>
+                                            <div class="col-auto overflow-auto ">
+                                                <label style="color: white;" for="foto_mascota" class="form-label">monte una foto de la mascota</label><br>
+                                                <input style="color: white;" type="file" class="col-auto" id="foto_mascota" name="foto_mascota"><br>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-warning" type="submit">Registrar</button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
-                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- fin delmodal -->
+
+
+
+                <!-- modal para ver todas las mascotas  -->
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-dark align-top mb-4 col-auto " data-bs-toggle="modal" data-bs-target="#vermascotas">
+                    Ver todos
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="vermascotas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Tod@s Tus Amigos Fieles</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div style="background-color: #f8f9fa;" class="modal-body text-center ">
+                                <div class="text-center ms-auto">
+                                    <?php
+                                    //consulta a la tb de mascotas
+                                    $sql = $con->prepare("SELECT * FROM mascotas WHERE id_usuario='$id'");
+                                    $sql->execute();
+                                    $consulinfomascota = $sql->fetchAll(PDO::FETCH_OBJ);
+                                    ?>
+                                    <?php
+                                    foreach ($consulinfomascota as $infomascota) {
+                                        //header("Content-type: image/jpg");
+                                        $imgmasco = $infomascota->foto_mascota;
+                                    ?>
+                                        <div class="row ">
+                                            <div class="col-lg-8 m-4 ">
+
+                                                <div class="mx-auto p-2 " style="width:200px; height:200px">
+                                                    <?php echo '<img style="border-radius: 0px 80px 80px 90px" class="card-img-top border border-danger" src="data:image/jpg; base64,' . base64_encode($imgmasco) . '"alt="foto mascotaa" width="100%" height="100%">'; ?>
+                                                </div>
+                                                <h2 style="color: goldenrod;" class="text-uppercase fw-medium"><?php echo $infomascota->nombre_mascota; ?></h2>
+                                                <p>la fecha y hora de la proxima visita es el dia (15) mes (11) año (2023) a las (09:02)</p>
+                                                <!-- <p><a class="btn btn-secondary" href="#">Ver Detalles &raquo;</a></p> -->
+                                                <a type="button" class="btn btn-outline-danger align-top" href="ficha_salud.php?id=<?php echo $infomascota->id_mascota ?>">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-pulse" viewBox="0 0 16 16">
+                                                        <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z" />
+                                                        <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z" />
+                                                        <path d="M9.979 5.356a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.926-.08L4.69 10H4.5a.5.5 0 0 0 0 1H5a.5.5 0 0 0 .447-.276l.936-1.873 1.138 3.793a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h.5a.5.5 0 0 0 0-1h-.128L9.979 5.356Z" />
+                                                    </svg> Ver Detalles
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- fin del modal -->
                 </div>
+                <!-- fin del modal -->
             </div>
-
-            <div class="d-none d-sm-block">
-                <img class="mx-end-end" style="width: 350px; height: 520px; border-radius: 70px; padding: 8%;" src="../image/8962397.jpg" alt="Imagen de Freepik">
-            </div>
-
-
         </section>
 
 
@@ -285,11 +278,11 @@ if ($varsesion == null || $varsesion == '') {
                     ?>
                         <div class="col-md-6 ">
                             <div class="row g-0 border text-bg-light rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                                <div class="col p-4 d-flex flex-column position-static ">
+                                <div class="col p-4 d-flex flex-column position-static border-box">
                                     <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
-                                    <h3 class="mb-0"><?php echo $infonoticias->titulo ?></h3>
+                                    <h3 class="mb-0 "><?php echo $infonoticias->titulo ?></h3>
                                     <div class="mb-1 text-body-secondary">Nov 12/<?php echo $infonoticias->fecha ?></div>
-                                    <div class="card-text mb-auto text-truncate border-box p-1"><?php echo $infonoticias->descripcion_noticia ?></div>
+                                    <div style="max-width: 260px;" class="card-text mb-auto d-inline-block text-truncate border-box p-1"><?php echo $infonoticias->descripcion_noticia ?></div>
                                     <a href="noticia-destacada.php?id=<?php echo $infonoticias->id_noticia ?>" class="icon-link gap-1 icon-link-hover stretched-link">
                                         Continuar lectura...
                                         <svg class="bi">
@@ -299,11 +292,6 @@ if ($varsesion == null || $varsesion == '') {
                                 </div>
                                 <div class="col-auto d-none d-lg-block">
                                     <?php echo '<img  src="data:image/jpg; base64,' . base64_encode($imgnoti) . '"alt="foto noticia" width="200" height="250">'; ?>
-
-                                    <!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                        <title>Placeholder</title>
-                                        <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                                    </svg> -->
                                 </div>
                             </div>
                         </div>
