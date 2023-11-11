@@ -75,7 +75,7 @@ if ($varsesion == null || $varsesion == '') {
             </div>
         </div>
     </header>
-    <div>
+    <div class="container">
 
         <!-- alerta de bienvenida -->
         <div class="container">
