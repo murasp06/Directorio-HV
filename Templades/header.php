@@ -25,7 +25,7 @@
                 <div class="container">
                     <!-- <a href="#" class="navbar-brand text-start  d-flex"> -->
                         <button class="btn d-flex " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                            <img class=" rounded-4" src=" /image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" width="95" height="65" alt="">
+                            <img style="border-radius: 50px 0px 45px 50px;" src=" /image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" width="70" height="70" alt="L.amfica">
                             <h3 class="text-warning">AMFICA!System</h3>
                         </button>
                     <!-- </a> -->

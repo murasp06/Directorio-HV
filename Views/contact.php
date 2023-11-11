@@ -29,7 +29,7 @@
 
             <nav style="background-color: black; " class="navbar navbar-expand-md navbar-dark border-bottom">
                 <div class="container-fluid">
-                    <a class="navbar-brand text-warning fs-2 " href="/"><img class=" rounded-4" style="border-radius: 25px;" src="/image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" width="95" height="65" alt=""> AMFICA!</a>
+                    <a class="navbar-brand text-warning fs-2 " href="/"><img style="border-radius: 50px 0px 45px 50px;" style="border-radius: 25px;" src="/image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" width="200" height="200" alt="L.amfica"> AMFICA!</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
