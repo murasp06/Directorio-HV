@@ -95,7 +95,7 @@ if ($varsesion == null || $varsesion == '') {
             $id = $_SESSION['id'];
             require('../model/funciones.php');
             //consulta a la tb de mascotas
-            $sql = $con->prepare("SELECT * FROM mascotas WHERE id_usuario='$id' LIMIT 3");
+             $sql = $con->prepare("SELECT * FROM mascotas WHERE id_usuario='$id' LIMIT 3");
             $sql->execute();
             $consulinfomascota = $sql->fetchAll(PDO::FETCH_OBJ);
             ?>
@@ -108,7 +108,7 @@ if ($varsesion == null || $varsesion == '') {
 
                 ?>
                     <div class="row ">
-                        <div class="col-lg-8 m-4 border-box ">
+                        <div class="col-lg-8 m-2 border-box ">
 
                             <div class="mx-auto p-2 " style="width:200px; height:200px">
                                 <?php echo '<img style="border-radius: 0px 80px 80px 90px" class="card-img-top border border-danger" src="data:image/jpg; base64,' . base64_encode($imgmasco) . '"alt="foto mascotaa" width="100%" height="100%">'; ?>
