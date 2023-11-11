@@ -88,8 +88,6 @@ if ($varsesion == null || $varsesion == '') {
         </div>
 
 
-
-        <!-- secion donde se muestran las mascotas -->
         <!-- secion donde se muestran las mascotas -->
         <h3 style="color: goldenrod; " class="text-center fs-2 p-2 fw-bold">MIS AMIGOS FIELES</h3>
         <section class="container  d-sm-row  text-center">
@@ -110,7 +108,7 @@ if ($varsesion == null || $varsesion == '') {
 
                 ?>
                     <div class="row ">
-                        <div class="col-lg-8 m-4 ">
+                        <div class="col-lg-8 m-4 border-box ">
 
                             <div class="mx-auto p-2 " style="width:200px; height:200px">
                                 <?php echo '<img style="border-radius: 0px 80px 80px 90px" class="card-img-top border border-danger" src="data:image/jpg; base64,' . base64_encode($imgmasco) . '"alt="foto mascotaa" width="100%" height="100%">'; ?>
