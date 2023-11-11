@@ -7,7 +7,7 @@
 
     <form class="col-md-4 p-lg-5 mx-auto  p-5" method="post">
         <a href="/">
-            <img class="mb-4 rounded-4" src="/image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" alt="" width="92" height="87">
+            <img style="border-radius: 50px 0px 45px 50px;" src="/image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" alt="L.amfica" width="92" height="87">
         </a>
         <h1 class=" fs-1 h3 mb-3 fw-normal">Ingresar</h1>
         <?php
