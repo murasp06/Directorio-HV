@@ -35,7 +35,7 @@ if (isset($_FILES['foto_mascota'])) {
                 $sql->execute();
                 if ($sql) {
                     // echo '<script> document.write("registro exitoso"); </script>';
-                    header("location: ../views/usuarios.php");
+                    header("location: ../Views/User.php");
                 } else {
                     echo 'no registro..';
                 }
@@ -52,7 +52,7 @@ if (isset($_FILES['foto_mascota'])) {
     $sql->execute();
     if ($sql) {
         // echo '<script> document.write("registro exitoso"); </script>';
-        header("location: ../views/usuarios.php");
+        header("location: ../Views/User.php");
     } else {
         echo 'no registro..';
     }
