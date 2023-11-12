@@ -176,7 +176,7 @@ if ($varsesion == null || $varsesion == '') {
                                             </div>
                                             <div class="col-auto overflow-auto ">
                                                 <label style="color: white;" for="foto_mascota" class="form-label">monte una foto de la mascota</label><br>
-                                                <input style="color: white;" type="file" class="col-auto" id="foto_mascota" name="foto_mascota"><br>
+                                                <input style="color: white;" type="file" class="col-auto" id="foto_mascota" name="foto_mascota" required><br>
                                             </div>
                                             <div class="col-12">
                                                 <button class="btn btn-warning" type="submit">Registrar</button>
