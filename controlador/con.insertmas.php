@@ -1,6 +1,5 @@
 <?php
 session_start();
-session_start();
 $varsesion = $_SESSION['usuario'];
 $id_usuario = $_SESSION['id'];
 if ($varsesion == null || $varsesion == '') {
@@ -10,17 +9,14 @@ if ($varsesion == null || $varsesion == '') {
 }
 
 $nombre_mascota = $_POST['nombre_mascota'];
-// $doc_animal = $_POST['doc_animal'];
 $especie = $_POST['especie'];
 $raza = $_POST['raza'];
 $sexo = $_POST['sexo'];
 $fecha_nacimiento = $_POST['fecha_nacimiento'];
-// $id_usuario =  $_SESSION['id'];
 $foto_mascota = $_FILES['foto_mascota'];
 $nombre_imagen = $_FILES['foto_mascota']['name'];
 $tipo_imagen = $_FILES['foto_mascota']['type'];
 $tamano_imagen = $_FILES['foto_mascota']['size'];
-// $fotomas='';
 if (isset($_FILES['foto_mascota'])) {
     $check = getimagesize($_FILES["foto_mascota"]["tmp_name"]);
     if ($check !== false) {
@@ -34,7 +30,6 @@ if (isset($_FILES['foto_mascota'])) {
                 VALUES ('$nombre_mascota',default,'$especie','$raza','$sexo','$fecha_nacimiento','$id_usuario','$foto_mascotaConten');");
                 $sql->execute();
                 if ($sql) {
-                    // echo '<script> document.write("registro exitoso"); </script>';
                     header("location: ../Views/User.php");
                 } else {
                     echo 'no registro..';
