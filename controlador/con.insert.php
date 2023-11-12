@@ -22,12 +22,12 @@ if ($clave == $clave1) {
     $sql->execute();
 
     if ($sql) {
-        header("location: ../views/login.php?id=01");
+        header("location: ../Views/login.php?id=01");
     } else {
         echo '<div style="background-color: rgba(240, 44, 44, 0.277);color: red;padding:1px;">Usuario no registrado intente de nuevo en 30seg!</div>';
     }
 } else {
-    header("location: ../views/registros.php?id=02");
+    header("location: ../Views/registros.php?id=02");
     //echo '<div style="background-color: rgba(240, 44, 44, 0.277);color: red;padding:1px;">Las contaseñas no son iguales!</div>';
 }
 //cerrar la conexion a la bd.
