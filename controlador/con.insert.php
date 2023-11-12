@@ -12,13 +12,15 @@ $ciudad = $_POST['ciudad'];
 $num_celular = $_POST['num_celular'];
 $correo = $_POST['correo'];
 $direccion = $_POST['direccion'];
+date_default_timezone_set('America/Bogota');
+$fecha_registro=date('Y-m-d H:i:s');
 
 // $foto_user=$_POST['foto_user'];
 
 if ($clave == $clave1) {
     require('../model/conexion_bd.php');
-    $sql = $con->prepare("INSERT INTO usuarios (user,clave,nombre,apellidos,edad,documento,ciudad,num_celular,correo,direccion,id_rol,activo) 
-     VALUES ('$user','$clave1','$nombre','$apellidos','$edad','$documento','$ciudad','$num_celular','$correo','$direccion',DEFAULT,DEFAULT)");
+    $sql = $con->prepare("INSERT INTO usuarios (user,clave,nombre,apellidos,edad,documento,ciudad,num_celular,correo,direccion,id_rol,activo,fecha_registro) 
+     VALUES ('$user','$clave1','$nombre','$apellidos','$edad','$documento','$ciudad','$num_celular','$correo','$direccion',DEFAULT,DEFAULT,'$fecha_registro')");
     $sql->execute();
 
     if ($sql) {
