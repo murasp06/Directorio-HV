@@ -88,9 +88,9 @@
             <div class="m-1 p-2">
                 <!-- wassap -->
                 <img style="height: 50px;width: 50px;" src="/image/logo_wasap.png" alt="img-wasstapp">
-                <h4>Hablar De Negocios</h4>
-                <span>solo chat</span>
-                <a style="text-decoration: none;color: black;" href="tel:+573135258750">3135258750</a>
+                <h4>Escribenos</h4>
+                
+                <a  href="https://wa.link/0dy1dv">Enviar mensaje</a>
             </div>
         </div>
 
