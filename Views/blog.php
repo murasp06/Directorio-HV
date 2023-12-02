@@ -17,7 +17,7 @@ if ($varsesion == null || $varsesion == '') {
   <title>AMFIblog!</title>
   <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="shortcut icon" href="../amfica/favicon/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" type="image/x-icon/png">
   <style>
     body {
       font-family: 'Times New Roman', Times, serif;
@@ -32,7 +32,7 @@ if ($varsesion == null || $varsesion == '') {
       opc.regreso
     </button>
     <ul class="dropdown-menu">
-      <li><a class="btn btn-primary  m-1 btn-sm " href="usuarios.php">Suite</a></li>
+      <li><a class="btn btn-primary  m-1 btn-sm " href="Users.php">Suite</a></li>
       <li><a class="btn btn-primary  m-1 btn-sm " href="blog.php">Mural</a></li>
     </ul>
 
