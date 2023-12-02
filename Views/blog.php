@@ -32,7 +32,7 @@ if ($varsesion == null || $varsesion == '') {
       opc.regreso
     </button>
     <ul class="dropdown-menu">
-      <li><a class="btn btn-primary  m-1 btn-sm " href="Users.php">Suite</a></li>
+      <li><a class="btn btn-primary  m-1 btn-sm " href="User.php">Suite</a></li>
       <li><a class="btn btn-primary  m-1 btn-sm " href="blog.php">Mural</a></li>
     </ul>
 
@@ -46,7 +46,7 @@ if ($varsesion == null || $varsesion == '') {
       ?>
 
       <p class="text-start border-bottom"><?php fecha_actual() ?><!--Ultima publicación:--><span class="text-danger"><?php hora_actual(); ?></span></p>
-      <h1 class="display-3  fw-bold border-bottom border-danger border-3">Mural <img style="border-radius: 50px 0px 45px 50px;" src="../img/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" width="65" height="65" alt="L.amfica"> de Noticias</h1>
+      <h1 class="display-3  fw-bold border-bottom border-danger border-3">Mural <img style="border-radius: 50px 0px 45px 50px;" src="../image/WhatsApp Image 2023-10-01 at 5.45.47 PM.jpeg" width="65" height="65" alt="L.amfica"> de Noticias</h1>
 
       <?php
       foreach ($consulinfonoticias as $infonoticias) {
