@@ -117,8 +117,8 @@ if ($varsesion == null || $varsesion == '') {
         <section class="container  d-sm-row text-center">
             <?php
             $id = $_SESSION['id'];
-            require('../model/config.php');
-            require('../controlador/funciones.php');
+            require('../model/funciones.php');
+            
             //consulta a la tb de mascotas
             $sql = $con->prepare("SELECT * FROM mascotas WHERE id_usuario='$id' LIMIT 3");
             $sql->execute();
