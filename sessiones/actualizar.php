@@ -44,8 +44,8 @@ foreach ($datos_user as $datos) {
         </form>
     <?php }
 // para cerrar la conexion a la bd se asigna null a la variable que construye el pdo
-$sql=null;
- $con=null:
+    $sql=null;
+    $con=null;
     ?>
 
    
