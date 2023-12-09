@@ -14,7 +14,7 @@ include("../Templades/header.php");
 $id_usuario = $_GET['id'];
 // if ($_SESSION['admin'] == 1) { 
 
-require('../model/config.php');
+require('../model/funciones.php');
 // para actualizaciones de datos del usuario desde con el rol del admid
 $sql = $con->prepare("SELECT * FROM usuarios WHERE id_usuario=$id_usuario");
 $sql->execute();
