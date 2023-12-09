@@ -31,7 +31,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <div style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.853) -15%, goldenrod 50%);@media screen and (max-width:1074px){ .container{ px-4 py-5 my-5}}" class="container px-4 py-5 my-0.1">
+                                <div style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.853) -15%, goldenrod 50%);" class="container px-4 py-5 my-0.1">
                                     <img style="border-radius: 15px;" class="mb-4" src="../img/logo.jpg" alt="" width="72" height="57">
                                     <h3 class="h3 mb-3 fw-normal">Crear cuenta AMFICA!</h3>
                                     <form class="row g-3 needs-validation" action="../controlador/con.insert.php" method="post" novalidate>
